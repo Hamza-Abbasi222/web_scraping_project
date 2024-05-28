@@ -1,0 +1,12 @@
+pandas
+requests
+beautifulsoup4
+numpy
+dill
+scikit-learn
+seaborn
+scikit-learn
+camelot-py[cv]
+openpyxl
+
+#-e .
