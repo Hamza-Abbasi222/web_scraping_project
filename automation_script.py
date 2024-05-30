@@ -72,7 +72,7 @@ def generate_reports(df):
     print('Reports have been successfully generated: extracted_data.csv, extracted_data.xlsx, and extracted_data.pdf')
 
 def main():
-    url = input("Enter the URL to scrape: ").strip()
+    url = input("Enter the URL to scrape: ").strip() #http://books.toscrape.com/
 
     soup = fetch_data(url)
     available_features = extract_available_features(soup)

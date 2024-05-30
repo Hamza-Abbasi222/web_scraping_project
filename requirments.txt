@@ -8,5 +8,10 @@ seaborn
 scikit-learn
 camelot-py[cv]
 openpyxl
+selenium
+webdriver-manager
+reportlab
+pyinstaller
+
 
 #-e .
