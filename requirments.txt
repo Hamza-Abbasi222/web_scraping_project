@@ -12,6 +12,6 @@ selenium
 webdriver-manager
 reportlab
 pyinstaller
-
+openpyxl
 
 #-e .
