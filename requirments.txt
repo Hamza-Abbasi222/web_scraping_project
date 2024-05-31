@@ -13,5 +13,7 @@ webdriver-manager
 reportlab
 pyinstaller
 openpyxl
+pywhatkit
+
 
 #-e .
