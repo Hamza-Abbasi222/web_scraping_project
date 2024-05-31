@@ -7,8 +7,7 @@ import matplotlib.pyplot as plt
 from openpyxl import Workbook
 from openpyxl.utils.dataframe import dataframe_to_rows
 from openpyxl.chart import BarChart, Reference
-import pywhatkit as kit
-import json
+import re
 
 # Define the URL
 base_url = "http://books.toscrape.com/catalogue/page-{}.html"
@@ -32,7 +31,7 @@ def fetch_data():
 
 # Function to process and clean data
 def process_data(df):
-    df['Price'] = df['Price'].str.replace('£', '').str.replace('Â', '').astype(float)
+    df['Price'] = df['Price'].apply(lambda x: re.sub(r'[^0-9.]', '', x)).astype(float)
     return df
 
 # Function to generate reports
