@@ -1,0 +1,97 @@
+0,1,2,3
+Invisible,"Thin
+Red
+Solid","Medium
+Red
+Solid","Thick
+Red
+Solid"
+Invisible,"Thin
+Green
+Solid","Medium
+Green
+Solid","Thick
+Green
+Solid"
+Invisible,"Thin
+Blue
+Solid","Medium
+Blue
+Solid","Thick
+Blue
+Solid"
+Invisible,"Thin
+Cyan
+Dash","Medium
+Cyan
+Dash","Thick
+Cyan
+Dash"
+Invisible,"Thin
+Black
+Dash","Medium
+Black
+Dash","Thick
+Black
+Dash"
+"Ink Thin dashed
+Blue","Rectangle Thin
+dashed Blue","Ellipse Thin
+dashed Blue","Line Thin dashed
+Blue"
+"Ink Thin solid
+Green","Rectangle Thin
+solid Green","Ellipse Thin solid
+Green","Line Thin solid
+Green"
+"Ink
+Red","Rectangle
+Red","Ellipse
+Red","Line
+Red"
+"Ink
+Black","Rectangle
+Black","Ellipse
+Black","Line
+Black"
+"Ink
+Cyan","Rectangle
+Cyan","Ellipse
+Cyan","Line
+Cyan"
+"Ink
+Yellow","Rectangle
+Yellow","Ellipse
+Yellow","Line
+Yellow"
+"Ink
+Magenta","Rectangle
+Magenta","Ellipse
+Magenta","Line
+Magenta"
+"Ink
+Blue","Rectangle
+Blue","Ellipse
+Blue","Line
+Blue"
+"Ink Thick solid
+Red","Rectangle Thick
+solid Red","Ellipse Thick solid
+Red","Line Thick solid
+Red"
+Approved,As Is,Confidential,
+Departmental,Draft,Experimental,
+Expired,Final,For Comment,
+For Public Release,Not Approved,Not For Public Release,
+Sold,Top Secret,,
+Exstatic,Electric,Grumpy,
+Happy,Hurt,Neutral,
+Smirk,Surprised,Worried,
+Wow,Zippy,,
+Bogus,Bug,DDA,
+Fix,For Your Eyes Only,Nuke This,
+Optimize,Red Flag,Validate,
+Warning,When?,,
+A Genuine Find,Big Savings,Deals,
+Happy Birthday,Hot,Look What’s New,
+Neato,The Best Just Got Better,,

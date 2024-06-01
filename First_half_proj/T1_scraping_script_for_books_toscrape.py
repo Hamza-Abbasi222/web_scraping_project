@@ -1,4 +1,4 @@
-# T1_scraping_script.py
+# T1_scraping_script_for_books_toscrape.py
 
 import requests
 from bs4 import BeautifulSoup

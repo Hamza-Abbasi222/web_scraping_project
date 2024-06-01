@@ -5,6 +5,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 
 def get_valid_url():
@@ -22,6 +24,7 @@ def main():
 
     # Set up WebDriver
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    wait = WebDriverWait(driver, 10)
 
     try:
         # Open the webpage
@@ -39,7 +42,7 @@ def main():
 
                 # Perform the click action
                 try:
-                    element = driver.find_element(getattr(By, by.upper()), value)
+                    element = wait.until(EC.presence_of_element_located((getattr(By, by.upper()), value)))
                     element.click()
                     print(f"Clicked the element with {by} = {value}.")
                 except Exception as e:
@@ -55,7 +58,7 @@ def main():
 
                 # Perform the fill action
                 try:
-                    element = driver.find_element(getattr(By, by.upper()), value)
+                    element = wait.until(EC.presence_of_element_located((getattr(By, by.upper()), value)))
                     element.send_keys(text)
                     element.send_keys(Keys.RETURN)
                     print(f"Filled the element with {by} = {value} with text '{text}'.")

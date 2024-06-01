@@ -1,5 +1,3 @@
-# T2_extract_tables_from_pdfusing_camelot.py
-
 import camelot
 import pandas as pd
 import requests
@@ -9,7 +7,7 @@ from pathlib import Path
 def extract_tables_from_pdf(pdf_path):
     """Extract tables from the PDF file using Camelot."""
     try:
-        tables = camelot.read_pdf(pdf_path, pages='all')
+        tables = camelot.read_pdf(str(pdf_path), pages='all')  # Convert Path object to string
         if tables:
             print(f"Successfully extracted {len(tables)} table(s) from the PDF.")
         else:
@@ -58,7 +56,7 @@ def main():
         tables = extract_tables_from_pdf(pdf_path)
         
         if tables:
-            output_csv = "extracted_table_from_online_pdf.csv"
+            output_csv = "extracted_table_from_pdf.csv"
             save_tables_as_csv(tables, output_csv)
             
             # Print the combined DataFrame
