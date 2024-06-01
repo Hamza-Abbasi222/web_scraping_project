@@ -128,6 +128,7 @@ Converting Python Script to Executable:
 Convert a Python script to an executable file using tools like PyInstaller.
 Tasks:
 Package your script with PyInstaller.
+
 -------------------------------------------------------
 -------------------------------------------------------
 14. T14_automate_reports_and_whatsapp.py
