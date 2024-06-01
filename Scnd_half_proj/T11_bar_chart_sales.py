@@ -1,4 +1,4 @@
-# bar_chart_sales.py
+# T11_bar_chart_sales.py
 
 import pandas as pd
 import matplotlib.pyplot as plt

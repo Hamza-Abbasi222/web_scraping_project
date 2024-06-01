@@ -1,4 +1,4 @@
-# send_whatsapp_messages.py
+# T15_send_whatsapp_messages_to_ind_or_grp.py
 
 import pywhatkit as kit
 import datetime

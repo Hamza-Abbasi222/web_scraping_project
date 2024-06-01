@@ -1,4 +1,4 @@
-# main_script.py
+# T7_main_script.py
 
 import requests
 from bs4 import BeautifulSoup

@@ -1,3 +1,5 @@
+# T2_extract_tables_from_pdfusing_camelot.py
+
 import camelot
 import pandas as pd
 import requests

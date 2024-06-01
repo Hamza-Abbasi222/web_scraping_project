@@ -1,3 +1,5 @@
+# T5_Automating_Websites_Using_Selenium4.py
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
