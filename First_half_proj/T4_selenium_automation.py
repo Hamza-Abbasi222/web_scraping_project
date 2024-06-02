@@ -1,5 +1,4 @@
 # T4_selenium_automation.py
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -9,18 +8,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-def get_valid_url():
-    """Prompt the user for a valid website URL."""
-    while True:
-        url = input("Enter the URL of the website you want to interact with: ").strip()
-        if url.startswith(("http://", "https://")):
-            return url
-        else:
-            print("Invalid URL. Please enter a URL starting with 'http://' or 'https://'.")
-
-def main():
+def selenium_automation():
+    """Automate website interactions using Selenium."""
     # Get the website URL from the user
-    website_url = get_valid_url()
+    website_url = input("Enter the URL of the website you want to interact with: ").strip()
 
     # Set up WebDriver
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
@@ -77,6 +68,3 @@ def main():
     finally:
         # Close the WebDriver
         driver.quit()
-
-if __name__ == "__main__":
-    main()

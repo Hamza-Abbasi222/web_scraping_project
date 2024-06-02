@@ -7,7 +7,7 @@ import pandas as pd
 def get_valid_url():
     """Prompt the user for a valid website URL."""
     while True:
-        url = input("Enter the URL of the website you want to scrape headlines from: ").strip() #https://phonepcr.com/
+        url = input("Enter the URL of the website you want to scrape headlines from: ").strip()
         if url.startswith(("http://", "https://")):
             return url
         else:
@@ -15,8 +15,8 @@ def get_valid_url():
 
 def get_html_tag_and_class():
     """Prompt the user for the HTML tag and class used for the headlines."""
-    tag = input("Enter the HTML tag used for the headlines (e.g., 'h1', 'h2', 'div'): ").strip() #h2
-    class_name = input("Enter the class name used for the headlines (leave blank if not applicable): ").strip() #"mt-3"
+    tag = input("Enter the HTML tag used for the headlines (e.g., 'h1', 'h2', 'div'): ").strip()
+    class_name = input("Enter the class name used for the headlines (leave blank if not applicable): ").strip()
     return tag, class_name
 
 def scrape_headlines(url, tag, class_name):
@@ -35,7 +35,8 @@ def scrape_headlines(url, tag, class_name):
 
     return [headline.get_text(strip=True) for headline in headlines]
 
-def main():
+def export_headlines_to_csv():
+    """Extract headlines from a website and export them to a CSV file."""
     # Get the website URL from the user
     website_url = get_valid_url()
 
@@ -56,4 +57,4 @@ def main():
         print("No headlines found with the provided tag and class.")
 
 if __name__ == "__main__":
-    main()
+    export_headlines_to_csv()

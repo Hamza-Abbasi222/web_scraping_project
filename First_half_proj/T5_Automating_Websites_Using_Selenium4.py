@@ -6,18 +6,10 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 
-def get_valid_url():
-    """Prompt the user for a valid website URL."""
-    while True:
-        url = input("Enter the URL of the website you want to interact with: ").strip()
-        if url.startswith(("http://", "https://")):
-            return url
-        else:
-            print("Invalid URL. Please enter a URL starting with 'http://' or 'https://'.")
-
-def main():
+def extract_specific_elements_with_xpath():
+    """Extract specific elements from a website using XPath."""
     # Get the website URL from the user
-    website_url = get_valid_url()
+    website_url = input("Enter the URL of the website you want to interact with: ").strip()
 
     # Set up WebDriver
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
@@ -48,6 +40,3 @@ def main():
     finally:
         # Close the WebDriver
         driver.quit()
-
-if __name__ == "__main__":
-    main()

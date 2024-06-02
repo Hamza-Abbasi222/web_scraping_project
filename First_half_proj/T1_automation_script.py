@@ -64,6 +64,7 @@ def generate_reports(data):
     
     print('Reports have been successfully generated: extracted_data.csv, extracted_data.xlsx, and extracted_data.pdf')
 
+
 def main():
     url = input("Enter the URL to scrape: ").strip()
     
