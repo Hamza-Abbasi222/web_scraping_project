@@ -15,7 +15,7 @@ pyinstaller
 openpyxl
 pywhatkit
 canvas
-
+pyplot
 
 
 #-e .

@@ -68,3 +68,6 @@ def selenium_automation():
     finally:
         # Close the WebDriver
         driver.quit()
+
+if __name__ == "__main__":
+    selenium_automation()

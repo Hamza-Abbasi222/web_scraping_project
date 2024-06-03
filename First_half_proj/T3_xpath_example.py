@@ -1,3 +1,5 @@
+# T3_xpath_example.py
+
 from lxml import html
 
 def xpath_example():
@@ -45,3 +47,7 @@ def xpath_example():
     print("All Rows:")
     for row in all_rows:
         print(row.xpath('.//td/text()'))
+
+if __name__ == "__main__":
+    xpath_example()
+

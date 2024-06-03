@@ -40,3 +40,7 @@ def extract_specific_elements_with_xpath():
     finally:
         # Close the WebDriver
         driver.quit()
+
+
+if __name__ == "__main__":
+    extract_specific_elements_with_xpath()
