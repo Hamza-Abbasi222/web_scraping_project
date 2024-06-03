@@ -20,12 +20,39 @@ def main():
     option = input("Enter your choice: ").strip()
     
     if option == "1":
-        url = input("Enter the URL: ").strip()
-        tag_class_pairs = [
-            ('h1', 'class1'),
-            ('p', 'class2')
-            # Add more as needed
-        ]
+        url = input("Enter the URL to scrape: ").strip()
+        
+        try:
+            soup = fetch_data(url)
+        except requests.exceptions.RequestException as e:
+            print(f"Failed to fetch data: {e}")
+            return
+        
+        tag_class_pairs = []
+        while True:
+            tag_class_pair = input("Enter the HTML tag and its class to extract (tag,class), or enter 'done' to finish: ").strip()
+            if tag_class_pair.lower() == 'done':
+                break
+            # Check if the input is a tuple
+            if ',' in tag_class_pair:
+                parts = tag_class_pair.split(',')
+                if len(parts) != 2:
+                    print(f"Invalid input format: {tag_class_pair}. Please use 'tag,class' format.")
+                    continue
+                tag_class_pairs.append((parts[0].strip(), parts[1].strip()))
+            else:
+                print(f"Invalid input format: {tag_class_pair}. Please use 'tag,class' format.")
+        
+        if not tag_class_pairs:
+            print("No HTML tags provided.")
+            return
+        
+        try:
+            data = extract_information(soup, tag_class_pairs)
+            generate_reports(data)
+        except ValueError as e:
+            print(f"Error: {e}")
+
         soup = fetch_data(url)
         data = extract_information(soup, tag_class_pairs)
         generate_reports(data)
